@@ -20,10 +20,12 @@
                         class="input-group-field"
                         name="flickName"
                         placeholder="Name a flick"
+                        autofocus
+                        required
                     >
                     <div class="input-group-button">
                         <button
-                            class="succes button"
+                            class="success button"
                             type="submit"
                         >
                         Add flick
@@ -34,8 +36,20 @@
           </div>
       </div>
 
-      <div class="medium-8 medium-offset-2 cell">
-          <ul id="flick-list"></ul>
+      <div class="grid-x">
+        <div class="medium-8 medium-offset-2 cell">
+          <ul id="flick-list" class="no-bullet">
+              <li class="flick template">
+                  <span class="flick-name"></span>
+                  <span class="actions button-group">
+                      <button class="fav button">Fav</button>
+                      <button class="move-up button success">Up</button>
+                      <button class="move-down button success">Down</button>
+                      <button class="remove button alert">Remove</button>
+                  </span>
+              </li>
+          </ul>
+        </div>
       </div>
     
     <script src="app.js"></script>
