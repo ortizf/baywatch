@@ -1,7 +1,8 @@
 const app = {
 
     init(selectors) {
-        this.max = 0,
+        this.flicks = []
+        this.max = 0
         this.list = document.querySelector(selectors.listSelector)
 
         document
