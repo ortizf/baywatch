@@ -10,9 +10,13 @@
     <link rel="stylesheet" href="app.css">
   </head>
   <body>
+      <div class="mainH">
+      <h1>BAYWATCH</h1>
+      </div>
+      <div class="tag">
       <div class="grid-x">
           <div class="medium-8 medium-offset-2 cell">
-              <h1>Baywatch</h1>
+              <h1 class="emptyH"></h1>
               <form id="flick-form">
                   <div class="input-group">
                     <input 
@@ -35,22 +39,25 @@
               </form>
           </div>
       </div>
-
+    
+    <div class="medium-8 medium-offset-2 cell" id="listBack">
       <div class="grid-x">
-        <div class="medium-8 medium-offset-2 cell">
+        <div>
           <ul id="flick-list" class="no-bullet">
               <li class="flick template">
                   <span class="flick-name"></span>
                   <span class="actions button-group">
-                      <button class="fav button success">Fav</button>
+                      <button class="fav button">Fav</button>
                       <button class="move-up button">Up</button>
                       <button class="move-down button">Down</button>
-                      <button class="remove button alert">Remove</button>
+                      <button class="remove button">Remove</button>
                   </span>
               </li>
           </ul>
         </div>
       </div>
+    </div>
+    </div>
     
     <script src="app.js"></script>
   </body>
