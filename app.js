@@ -122,13 +122,15 @@ const app = {
 
     favFlick(flick, ev) {
         const listItem = ev.target.closest('.flick')
-        flick.fav = !flick.fav
+        flick.fav = listItem.classList.toggle('fav')
+
+        /*flick.fav = !flick.fav
 
         if (flick.fav) {
             listItem.classList.add('fav')
         } else {
             listItem.classList.remove('fav')
-        }
+        }*/
 
         this.save()
     },
