@@ -28,7 +28,26 @@
 
 .flick.fav {
     background-color: lightcoral;
-    border-color: skyblue;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 2s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {background-color: lightcoral;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: lightcoral;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color: lightcoral;}
+    25%  {background-color: yellow;}
+    50%  {background-color: orange;}
+    100% {background-color: lightcoral;}
 }
 
 .button {
@@ -51,4 +70,11 @@ li {
 
 body {
     background-color: lightblue;
+}
+
+h1 {
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 70px;
+    text-shadow: 1px 1px 2px #082b34;
 }
