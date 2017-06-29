@@ -45,7 +45,7 @@ li {
 }
 
 .flick.fav {
-    background-color: lightcoral;
+    background-color: yellow;
 }
 
 #listBack {
@@ -62,7 +62,6 @@ li {
 
 h1 {
     font-size: 60px;
-    font-weight: normal;
 }
 
 .mainH {
