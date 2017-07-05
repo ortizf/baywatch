@@ -82,8 +82,29 @@ const app = {
         item
             .querySelector('button.move-down')
             .addEventListener('click', this.moveDown.bind(this, flick))
+        
+        item
+            .querySelector('button.edit')
+            .addEventListener('click', this.editFlick.bind(this, flick))
 
         return item
+    },
+
+    editFlick(flick, ev) {
+        const listItem = ev.target.closest('.flick')
+        const nameField = listItem.querySelector('.flick-name')
+        
+        if (nameField.isContentEditable) {
+        
+            // make it no longer editable
+            nameField.contentEditable = false
+ 
+           // save changes
+           flick.name = nameField.textContent
+           this.save()
+        } else {
+            nameField.contentEditable = true
+        }
     },
 
     moveDown(flick, ev) {
